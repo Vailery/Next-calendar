@@ -1,0 +1,7 @@
+{
+  "app_name": "Calendar",
+  "exit_button": "Sign Out",
+  "day": "Today",
+  "weekdays": "SMTWTFS",
+  "error_message": "You don't have events!"
+}

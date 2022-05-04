@@ -1,6 +1,6 @@
 import styles from "./error.module.css";
 import lottie from "lottie-web";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { Button } from "../button/button";
 import styled from "styled-components";
@@ -9,7 +9,7 @@ export const Error = () => {
   const container = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (container.current) {
       const animation = lottie.loadAnimation({
         container: container.current,

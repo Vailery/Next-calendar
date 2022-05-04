@@ -1,0 +1,7 @@
+{
+  "app_name": "Calendario",
+  "exit_button": "Cerrar Sesión",
+  "day": "Hoy",
+  "weekdays": "DLMMJVS",
+  "error_message": "¡No tienes eventos!"
+}
