@@ -3,5 +3,6 @@
   "exit_button": "Cerrar Sesión",
   "day": "Hoy",
   "weekdays": "DLMMJVS",
-  "error_message": "¡No tienes eventos!"
+  "error_message": "¡No tienes eventos!",
+  "login_button": "Sesión"
 }
