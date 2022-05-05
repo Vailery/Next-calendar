@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title {
+  font-family: "SF-Medium";
+  font-size: 12px;
+  line-height: 14px;
+  color: #ee5c51;
+  text-transform: uppercase;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  width: 140px;
+}
+
+.days p.prevDate,
+.days p.nextDate {
+  opacity: 0;
+}
+
+.days p.today {
+  color: #ffffff;
+  background: #ee5c51;
+  border-radius: 50%;
+}
+
+.days p.day:hover {
+  border: 1px #ee5c51 solid;
+  border-radius: 50%;
+}

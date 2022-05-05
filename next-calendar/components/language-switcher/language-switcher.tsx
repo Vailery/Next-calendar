@@ -1,17 +1,16 @@
-import { i18n } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { ChangeEvent } from "react";
 import styled from "styled-components";
 
 export const LanguageSwitcher = () => {
+  const { i18n } = useTranslation();
   const router = useRouter();
   const locales = router.locales as string[];
 
   const onSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const locale = event.target.value;
-    if (i18n) {
-      i18n.changeLanguage(locale);
-    }
+    i18n.changeLanguage(locale);
 
     router.push(router.asPath, router.asPath, {
       locale,
@@ -20,21 +19,19 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    i18n && (
-      <Select>
-        <select value={i18n.language} onChange={onSelectChange}>
-          {locales.map((locale) => (
-            <option value={locale} key={locale}>
-              {locale === "es"
-                ? "Español"
-                : locale === "ru"
-                ? "Русский"
-                : "English"}
-            </option>
-          ))}
-        </select>
-      </Select>
-    )
+    <Select>
+      <select value={i18n.language} onChange={onSelectChange}>
+        {locales.map((locale) => (
+          <option value={locale} key={locale}>
+            {locale === "es"
+              ? "Español"
+              : locale === "ru"
+              ? "Русский"
+              : "English"}
+          </option>
+        ))}
+      </select>
+    </Select>
   );
 };
 

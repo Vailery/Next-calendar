@@ -1,0 +1,24 @@
+.main {
+  position: relative;
+  padding-left: 8px;
+  width: 123px;
+}
+
+.main:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #b54896;
+  border-radius: 1px;
+}
+
+.main.next:before {
+  background: #71b548;
+}
+
+.main.green:before {
+  background: #71b548;
+}
