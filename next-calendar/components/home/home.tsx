@@ -8,7 +8,8 @@ import { useRouter } from "next/router";
 import { Widget } from "../widget/widget";
 import { signOut, useSession } from "next-auth/client";
 import styled from "styled-components";
-import styles from "./Home.module.css";
+import styles from "./home.module.css";
+import { Loader } from "../loader/Loader";
 
 export const Home = () => {
   const [session] = useSession();
@@ -28,7 +29,11 @@ export const Home = () => {
   }, [session]);
 
   if (!session) {
-    return <p>Loading...</p>;
+    return (
+      <div className={styles.mainLoader}>
+        <Loader />
+      </div>
+    );
   }
 
   return (
@@ -36,7 +41,6 @@ export const Home = () => {
       <div className={styles.menu}>
         <Button onClick={handleSignoutClick} text={t("common:exit_button")} />
 
-        <p>{session?.user?.name}</p>
         <Title>{t("common:app_name")}</Title>
 
         <div className={styles.toggles}>

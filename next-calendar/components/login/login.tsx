@@ -5,6 +5,7 @@ import { signIn, useSession } from "next-auth/client";
 import { Button } from "../button/button";
 import styled from "styled-components";
 import styles from "./login.module.css";
+import { Loader } from "../loader/Loader";
 
 export const Login = () => {
   const [session, loadingSession] = useSession();
@@ -22,7 +23,11 @@ export const Login = () => {
   }, [session]);
 
   if (loadingSession) {
-    return <p>Loading...</p>;
+    return (
+      <div className={styles.mainLoader}>
+        <Loader />
+      </div>
+    );
   }
 
   return (

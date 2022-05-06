@@ -50,3 +50,8 @@ p {
   font-weight: 600;
   font-style: normal;
 }
+
+:root {
+  --loader-ring-size: 240px;
+  --loader-ring-border-size: 4px;
+}
