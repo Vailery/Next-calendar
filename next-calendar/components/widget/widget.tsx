@@ -23,7 +23,7 @@ export interface IEvents {
   events: IEvent[];
 }
 
-export const Widget = React.memo(() => {
+const Widget = () => {
   const [events, setEvents] = useState<IEvent[]>([]);
   const [x, setX] = useState<number>(0);
   const [y, setY] = useState<number>(0);
@@ -75,7 +75,7 @@ export const Widget = React.memo(() => {
       </Main>
     </ResizableBox>
   );
-});
+};
 
 const Main = styled.div`
   position: absolute;
@@ -84,3 +84,5 @@ const Main = styled.div`
   background: ${({ theme }) => theme.widgetBackground};
   border-radius: 21.67px;
 `;
+
+export default React.memo(Widget);

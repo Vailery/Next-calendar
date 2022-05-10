@@ -5,7 +5,7 @@ import { ThemeContext } from "../../context/theme";
 import { useTranslation } from "next-i18next";
 import { LanguageSwitcher } from "../language-switcher/language-switcher";
 import { useRouter } from "next/router";
-import { Widget } from "../widget/widget";
+import Widget from "../widget/widget";
 import { signOut, useSession } from "next-auth/client";
 import styled from "styled-components";
 import styles from "./home.module.css";
