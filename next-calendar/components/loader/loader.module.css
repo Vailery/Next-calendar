@@ -1,10 +1,9 @@
 .loaderRing {
   position: relative;
-  top: 50%;
   margin: var(--loader-ring-size) / -2 0 0 var(--loader-ring-size) / -2;
   width: var(--loader-ring-size);
   height: var(--loader-ring-size);
-  transform: scale(0.7);
+  transform: scale(0.4);
 }
 
 .loaderRingLight {

@@ -15,6 +15,7 @@ export const LanguageSwitcher = () => {
     router.push(router.asPath, router.asPath, {
       locale,
       scroll: false,
+      shallow: true,
     });
   };
 

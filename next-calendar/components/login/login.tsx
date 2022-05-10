@@ -5,7 +5,7 @@ import { signIn, useSession } from "next-auth/client";
 import { Button } from "../button/button";
 import styled from "styled-components";
 import styles from "./login.module.css";
-import { Loader } from "../loader/Loader";
+import { Loader } from "../loader/loader";
 
 export const Login = () => {
   const [session, loadingSession] = useSession();
@@ -13,7 +13,7 @@ export const Login = () => {
   const { t } = useTranslation();
 
   const handleAuthClick = () => {
-    signIn();
+    signIn("google");
   };
 
   useEffect(() => {

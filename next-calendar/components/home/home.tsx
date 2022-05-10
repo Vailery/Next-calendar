@@ -9,7 +9,7 @@ import { Widget } from "../widget/widget";
 import { signOut, useSession } from "next-auth/client";
 import styled from "styled-components";
 import styles from "./home.module.css";
-import { Loader } from "../loader/Loader";
+import { Loader } from "../loader/loader";
 
 export const Home = () => {
   const [session] = useSession();
@@ -25,7 +25,6 @@ export const Home = () => {
     if (!session?.user) {
       router.push("/");
     }
-    console.log(session);
   }, [session]);
 
   if (!session) {
