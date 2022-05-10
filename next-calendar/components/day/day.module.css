@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.dayOfWeek {
+  font-family: "SF-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ee5c51;
+}
+
+.dayOfWeek::first-letter {
+  text-transform: uppercase;
+}
