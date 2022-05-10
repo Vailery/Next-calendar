@@ -18,6 +18,7 @@ function Layout({ children }: ILayout) {
         <link rel="icon" href="/assets/img/favicon.ico" />
         <title>{t("common:app_name")}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Apple calendar widget" />
       </Head>
 
       <ThemeProvider theme={theme}>
